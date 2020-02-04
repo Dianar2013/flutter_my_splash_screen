@@ -5,25 +5,16 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
-
-/**
- * SplashScreen
- * 启动屏
- * from：http://www.devio.org
- * Author:CrazyCodeBoy
- * GitHub:https://github.com/crazycodeboy
- * Email:crazycodeboy@gmail.com
- */
-public class FlutterSplashScreenPlugin implements MethodCallHandler {
+public class FlutterMySplashScreenPlugin implements MethodCallHandler {
     private final Activity activity;
 
-    private FlutterSplashScreenPlugin(Activity activity) {
+    private FlutterMySplashScreenPlugin(Activity activity) {
         this.activity = activity;
     }
 
     public static void registerWith(Registrar registrar) {
-        final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter_splash_screen");
-        channel.setMethodCallHandler(new FlutterSplashScreenPlugin(registrar.activity()));
+        final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter_my_splash_screen");
+        channel.setMethodCallHandler(new FlutterMySplashScreenPlugin(registrar.activity()));
     }
 
     @Override
