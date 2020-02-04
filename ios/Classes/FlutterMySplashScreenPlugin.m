@@ -52,7 +52,7 @@ static UIView *_myLaunchiWindow = nil;
     [lauchWindow addSubview:middleImgView];
      
     UIImageView *bottomImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"qidongtu_pic_meiyou.png"]];
-    bottomImgView.center = CGPointMake(CGRectGetWidth(windowFrame)/2.0, CGRectGetHeight(windowFrame) - CGRectGetHeight(bottomImgView.bounds) - 28);
+    bottomImgView.center = CGPointMake(CGRectGetWidth(windowFrame)/2.0, CGRectGetHeight(windowFrame) - CGRectGetHeight(bottomImgView.bounds)/2.0 - 28);
     [lauchWindow addSubview:bottomImgView];
      
     
