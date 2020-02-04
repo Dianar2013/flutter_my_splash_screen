@@ -47,11 +47,14 @@ static UIView *_myLaunchiWindow = nil;
     UIWindow *lauchWindow = [[UIWindow alloc] initWithFrame:windowFrame];
     lauchWindow.backgroundColor = [UIColor whiteColor];
    
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LaunchImage.png"]];
-   
-    imageView.center = CGPointMake(CGRectGetWidth(windowFrame)/2.0, CGRectGetHeight(windowFrame)/2.0);
-    imageView.clipsToBounds = YES;
-    [lauchWindow addSubview:imageView];
+    UIImageView *middleImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"qidongtu_pic_nvrentong.png"]];
+    middleImgView.center = CGPointMake(CGRectGetWidth(windowFrame)/2.0, CGRectGetHeight(windowFrame)/2.0);
+    [lauchWindow addSubview:middleImgView];
+     
+    UIImageView *bottomImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"qidongtu_pic_meiyou.png"]];
+    bottomImgView.center = CGPointMake(CGRectGetWidth(windowFrame)/2.0, CGRectGetHeight(windowFrame) - CGRectGetHeight(bottomImgView.bounds) - 28);
+    [lauchWindow addSubview:bottomImgView];
+     
     
     [UIView animateWithDuration:0.001 animations:^{
         
