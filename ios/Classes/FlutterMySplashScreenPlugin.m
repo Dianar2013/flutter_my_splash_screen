@@ -1,6 +1,6 @@
 #import "FlutterMySplashScreenPlugin.h"
  
-static FlutterMySplashScreenPlugin *_mysPluginInstance = nil;
+//static FlutterMySplashScreenPlugin *_mysPluginInstance = nil;
 
 @implementation FlutterMySplashScreenPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
@@ -9,7 +9,7 @@ static FlutterMySplashScreenPlugin *_mysPluginInstance = nil;
              binaryMessenger:[registrar messenger]];
    FlutterMySplashScreenPlugin* instance = [[FlutterMySplashScreenPlugin alloc] init];
    [registrar addMethodCallDelegate:instance channel:channel];
-   _mysPluginInstance = instance;
+//   _mysPluginInstance = instance;
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
