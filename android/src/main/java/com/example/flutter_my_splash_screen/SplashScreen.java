@@ -2,6 +2,8 @@ package com.example.flutter_my_splash_screen;
 import android.app.Activity;
 import android.app.Dialog;
 import android.os.Build;
+import android.view.WindowManager;
+
 import java.lang.ref.WeakReference;
 
 public class SplashScreen {
@@ -60,7 +62,7 @@ public class SplashScreen {
         if (activity == null) return;
 
         final Activity _activity = activity;
-
+        _activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         _activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
